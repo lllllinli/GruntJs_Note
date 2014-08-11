@@ -44,3 +44,6 @@ $sudo npm install -g grunt-cli
 2.AndyYou's Blog - grunt-init 使用教學與 grunt-init-simple-server <br>
 [Link](http://andyyou.logdown.com/posts/177346-grunt-init)<br>
 
+gruntjs - 官方網站（簡體）<br>
+[Link](http://www.gruntjs.org/docs/sample-gruntfile.html)<br>
+
