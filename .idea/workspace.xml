@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06af8743-4008-402d-a71e-fe8d33cd2bf3" name="Default" comment="" />
+    <list default="true" id="06af8743-4008-402d-a71e-fe8d33cd2bf3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GruntJs_Note_02_UseGruntInit.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GrountJs_Note_01_GettingStarted.md" afterPath="$PROJECT_DIR$/GrountJs_Note_01_GettingStarted.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="GruntJs_Note.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,14 +27,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="GrountJs_Note_01_GettingStarted.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GrountJs_Note_01_GettingStarted.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GrountJs_Note_01_GettingStarted.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7413793" vertical-offset="140" max-vertical-offset="975">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="705">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GruntJs_Note_02_UseGruntInit.md" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GruntJs_Note_02_UseGruntInit.md">
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+              <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -50,6 +67,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/GrountJs_Note_01_GettingStarted.md" />
+        <option value="$PROJECT_DIR$/GruntJs_Note_02_UseGruntInit.md" />
       </list>
     </option>
   </component>
@@ -170,6 +188,26 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="725" extended-state="6" />
     <editor active="true" />
@@ -218,8 +256,19 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7413793" vertical-offset="140" max-vertical-offset="975">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state vertical-scroll-proportion="-13.333333" vertical-offset="0" max-vertical-offset="705">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GruntJs_Note_02_UseGruntInit.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
           <folding />
         </state>
       </provider>
