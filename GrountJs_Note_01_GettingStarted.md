@@ -19,9 +19,14 @@ $sudo npm install -g grunt-cli
 
 ##建立一個新的Grunt專案##
 
+必須建立兩個檔案：
+  
+1.package.json。
+2.Gruntfile.js。
+
 
 ###1.建立 package.json 檔###
-
+建立檔案的目的，設定grunt相依套件。
 
 
 
