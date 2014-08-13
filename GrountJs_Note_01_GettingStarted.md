@@ -44,10 +44,10 @@ $npm install <module> --save-dev
 
 完成一個 Gruntfile 有四個部分：
 
-+包裝函示（wrapper function）。
-+配置計劃和任務(task)。
-+載入plugin和task。
-+客製化任務。
++ 包裝函示（wrapper function）。
++ 配置計劃和任務(task)。
++ 載入plugin和task。
++ 客製化任務。
 
 
 
