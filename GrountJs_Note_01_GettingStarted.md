@@ -45,16 +45,25 @@ $npm install <module> --save-dev
 <br>
 
 + 包裝函示（wrapper function）。
-+ 配置計劃和任務(task)。
-+ 載入 plugin 和 task 。
++ 配置計劃(Preject)和任務(Task)。
++ 載入 plugin 和 Task 。
 + 客製化任務 task。
  
 ####Gruntfile sample####
 
 ```javascript
 
-module.exports = function(grunt) {
 
+/*
+* 1第一部分，包裹函示。( wrapper function ) :
+*
+* module.exports = function(grunt) {}
+*
+*/
+module.exports = function(grunt) {
+  /*
+  * 2.第二部分，項目和任務配置。
+  */
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -68,10 +77,18 @@ module.exports = function(grunt) {
       }
     }
   });
+  
+  /*
+  * 3.載入 plugin 和 Task 。
+  */
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
-
+  
+  
+  /*
+  * 4.註冊任務。
+  */
   // Default task(s).
   grunt.registerTask('default', ['uglify']);
 
