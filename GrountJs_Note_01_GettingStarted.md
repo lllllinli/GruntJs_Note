@@ -27,6 +27,16 @@ $sudo npm install -g grunt-cli
 
 ###1.建立 package.json 檔###
 建立檔案的目的，設定grunt相依套件。
+<br>
+加入套件：
+<br>
+`````
+//--save-dev 選項會把node套件加到package.json
+$npm install <module> --save-dev
+
+`````
+
+
 
 
 
