@@ -31,14 +31,13 @@ $sudo npm install -g grunt-cli
 加入套件：
 <br>
 `````
-//--save-dev 選項會把node套件加到package.json
+/*
+* --save-dev 選項，會更新 package.json。
+*/
+
 $npm install <module> --save-dev
 
 `````
-
-
-
-
 
 
 ###2.建立 Gruntfile 檔###
