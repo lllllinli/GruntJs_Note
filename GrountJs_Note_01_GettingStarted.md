@@ -42,6 +42,14 @@ $npm install <module> --save-dev
 
 ###2.建立 Gruntfile 檔###
 
+完成一個 Gruntfile 有四個部分：
+
++包裝函示（wrapper function）。
++配置計劃和任務(task)。
++載入plugin和task。
++客製化任務。
+
+
 
 
 
