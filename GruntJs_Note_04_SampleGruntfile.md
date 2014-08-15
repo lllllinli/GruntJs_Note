@@ -15,6 +15,7 @@ Gruntfile Sample (範例)
 
 ```javascript
 
+//依序執行
 
 $sudo npm grunt-contrib-uglify --save-dev 
 
@@ -37,6 +38,7 @@ $sudo npm grunt-contrib-watch --save-dev
 
 module.exports=function(grunt){
     //這裡執行 grunt 
+    
 };
 
 ```
@@ -45,10 +47,89 @@ module.exports=function(grunt){
 
 ```javascript
 module.exports=function(grunt){
-    //這裡執行 grunt
-     grunt.
+
+    //這裡執行 grunt initConfig()
+     
+     grunt.initConfig=function(){
+        
+     };
 };
 
 
 ```
 
+(3). 載入 `package.json` 檔，並起合併到 `pkg` 屬性中。
+
+```javascript
+module.exports=function(grunt){
+
+    grunt.initConfig({
+        //將 package.json 屬性存入 pkg ，可以以 <%= pkg.屬性 %> 取得。
+        pkg: grunt.file.readJSON('package.json')
+    });
+
+};
+
+```
+
+(4). 配置 Task - concat 、。
+
+```javascript
+
+module.exports=function(grunt){
+    grunt.initConfig({
+        //將 package.json 屬性存入 pkg ，可以以 <%= pkg.屬性 %> 取得。
+        pkg: grunt.file.readJSON('package.json'),
+        //concat 套件串接檔案成一個檔。
+        concat:{
+            options:{
+                // 設定檔案與檔案之間的串接方式，以 ';' 做分隔。
+                separator:';',
+                // 產生一組註解，在檔案的開始。
+                banner:'/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %>*/\n'
+            },
+            dist: {
+                    //用于连接的文件
+                    src: ['src/**/*.js'],
+                    //返回的JS文件位置
+                    dest: 'dist/<%= pkg.name %>.js'
+                }
+        },
+        //ugLify 壓縮 js 檔工具。
+        uglify: {
+            options: {
+                banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+            },
+            dist: {
+                files: {
+                    'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+                }
+            }
+        },
+         // qunit 測試 js 套件。
+        qunit: {
+            files: ['test/**/*.html']
+        },
+        jshint: {
+            //定義要用檢測的文件
+            files: ['gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+            //配置JSHint (参考文件:http://www.jshint.com/docs)
+            options: {
+                //你可以在这里重写jshint的默认配置选项
+                globals: {
+                    jQuery: true,
+                    console: true,
+                    module: true
+                }
+            }
+        },
+        //檢查 jshint.files 檔案發生變化，就執行 jshint 、quint Tasks
+        watch: {
+            files: ['<%= jshint.files %>'],
+            tasks: ['jshint', 'qunit']
+        }
+    });
+}
+
+
+```
