@@ -72,7 +72,7 @@ module.exports=function(grunt){
 
 ```
 
-(4). 配置 Task - concat 、。
+(4). 配置 Task - `concat` 、 `uglify` 、 `qunit` 、 `jshint` 、 `watch`。
 
 ```javascript
 
@@ -115,7 +115,7 @@ module.exports=function(grunt){
             files: ['gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
             //配置JSHint (参考文件:http://www.jshint.com/docs)
             options: {
-                //你可以在这里重写jshint的默认配置选项
+                //設定 jshint 預設設定
                 globals: {
                     jQuery: true,
                     console: true,
@@ -126,6 +126,7 @@ module.exports=function(grunt){
         //檢查 jshint.files 檔案發生變化，就執行 jshint 、quint Tasks
         watch: {
             files: ['<%= jshint.files %>'],
+            //當檔案發現改變，執行 jshint、qunit
             tasks: ['jshint', 'qunit']
         }
     });
@@ -133,3 +134,35 @@ module.exports=function(grunt){
 
 
 ```
+
+(5).讀取 grunt plugin 
+
+```javascript
+
+grunt.loadNpmTasks('grunt-contrib-uglify');
+grunt.loadNpmTasks('grunt-contrib-jshint');
+grunt.loadNpmTasks('grunt-contrib-qunit');
+grunt.loadNpmTasks('grunt-contrib-watch');
+grunt.loadNpmTasks('grunt-contrib-concat');
+
+```
+
+(6).設定任務 `Task` ，最重要的是 `default` 任務 `Task`。
+
+##### 在命令列中直接執行， `$grunt` ，預設會執行的任務 `Task` 為， `default` Task 。##### 
+
+```javascript
+
+// this would be run by typing "grunt test" on the command line
+// 這是其他自己設定的 Task
+grunt.registerTask('test', ['jshint', 'qunit']);
+
+// the default task can be run just by typing "grunt" on the command line
+// 這是下 $grunt ，預設的 task
+grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
+
+```
+
+
+
+
